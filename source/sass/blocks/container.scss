@@ -1,0 +1,5 @@
+.container {
+  @include reset-child-margins;
+  @include set-container;
+  @include set-paddings;
+}

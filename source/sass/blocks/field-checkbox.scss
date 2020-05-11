@@ -1,0 +1,72 @@
+.field-checkbox__input {
+  @include visually-hidden;
+}
+
+.field-checkbox__label {
+  position: relative;
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 46px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $nero;
+  user-select: none;
+
+  @media (min-width: $tablets) {
+    padding-top: 26px;
+    padding-left: 60px;
+    padding-bottom: 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    padding-top: 6px;
+    padding-right: 3px;
+    padding-bottom: 6px;
+    padding-left: 4px;
+    border: 1px solid $grey80;
+
+    @media (min-width: $tablets) {
+      top: 16px;
+      width: 40px;
+      height: 40px;
+      padding-top: 11px;
+      padding-right: 8px;
+      padding-bottom: 11px;
+      padding-left: 9px;
+    }
+  }
+}
+
+.field-checkbox__input:checked ~ .field-checkbox__label::before {
+  background: url("../img/icon-tick.svg") no-repeat center;
+  background-size: 21px auto;
+  background-clip: content-box;
+}
+
+.field-checkbox__input:focus ~ .field-checkbox__label::before {
+  border-color: $silver;
+}
+
+.field-checkbox__input:not(:disabled) ~ .field-checkbox__label:hover::before {
+  border-color: $silver;
+}
+
+.field-checkbox__input:disabled ~ .field-checkbox__label {
+  opacity: 0.3;
+}
