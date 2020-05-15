@@ -42,8 +42,8 @@
 @mixin set-container () {
   @media (min-width: $tablets) {
     max-width: $tablets-max-width;
-    margin-left : auto;
-    margin-right : auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: $desktops) {
