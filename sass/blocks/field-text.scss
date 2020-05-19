@@ -1,0 +1,136 @@
+.field-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.field-text__label {
+  flex-shrink: 0;
+  max-width: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $nero;
+
+  @media (min-width: $tablets) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-right: 18px;
+  }
+
+  &--email {
+    margin-right: 10px;
+
+    @media (min-width: $tablets) {
+      margin-right: 15px;
+    }
+
+    @media (min-width: $desktops) {
+      margin-right: 22px;
+    }
+  }
+
+  &--phone {
+    margin-right: 10px;
+
+    @media (min-width: $desktops) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.field-text__input {
+  width: 100%;
+  height: 45px;
+  padding: 13px 15px 12px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $nero;
+  background-color: $white;
+  border: 1px solid rgba($grey80, 0.5);
+
+  @media (min-width: $tablets) {
+    height: 52px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 6px 18px;
+  }
+
+  &::placeholder {
+    color: $grey-dark;
+    opacity: 1;
+  }
+
+  &:hover {
+    border-color: $grey80;
+  }
+
+  &:focus {
+    border-color: $blue-dark;
+    box-shadow: inset 0 0 0 1px $blue-dark;
+    outline: none;
+  }
+
+  &--comment {
+    height: 150px;
+    padding-right: 10px;
+    resize: none;
+
+    @media (min-width: $tablets) {
+      height: 174px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &--invalid {
+    border-color: $coral-light;
+    box-shadow: inset 0 0 0 1px $coral-light;
+  }
+}
+
+.field-text__input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.field-text__input-wrapper--icon .field-text__input {
+  padding-right: 47px;
+}
+
+.field-text__icon {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  transform: translate(100%, -50%);
+  fill: $nero;
+
+  @media (min-width: $tablets) {
+    right: 37px;
+  }
+
+  &--email {
+    width: 17px;
+    height: 13px;
+  }
+
+  &--phone {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.field-text__input:focus ~ .field-text__icon {
+  fill: $green;
+}
+
+.field-text__input--invalid ~ .field-text__icon {
+  fill: $coral-light;
+}

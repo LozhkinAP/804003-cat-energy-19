@@ -1,0 +1,90 @@
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 280px;
+  min-height: 289px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 65px 55px 43px;
+  text-decoration: none;
+  text-align: center;
+  color: $white;
+  background-color: $green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablets) {
+    width: auto;
+    margin: 0;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  @media (min-width: $tablets) and (min-resolution: $retina-dpi),
+    (min-width: $tablets) and (min-resolution: $retina-dppx) {
+    background-image: url("../img/gift-photo-tablet@2x.jpg");
+  }
+
+  @media (min-width: $desktops) {
+    padding-left: 40px;
+    padding-right: 40px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  @media (min-width: $desktops) and (min-resolution: $retina-dpi),
+    (min-width: $desktops) and (min-resolution: $retina-dppx) {
+    background-image: url("../img/gift-photo-desktop@2x.jpg");
+  }
+
+  &::before {
+    flex-shrink: 0;
+    content: "";
+    position: static;
+    display: block;
+    width: 55px;
+    height: 60px;
+    background: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55px 60px;
+  }
+}
+
+.promo__title {
+  width: 100%;
+  margin-top: 62px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+@media (min-width: $tablets) and (max-width: $tablets-max) {
+  .promo {
+    min-height: 200px;
+    padding: 65px 120px 65px 90px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    text-align: left;
+
+    &::before {
+      padding-bottom: 10px;
+    }
+  }
+
+  .promo__title {
+    width: 165px;
+    margin-top: 0;
+    margin-left: auto;
+    padding-top: 7px;
+  }
+}
