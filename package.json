@@ -10,8 +10,10 @@
     "gulp": "4.0.x",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.4",
     "gulp-sass": "4.0.x",
-    "gulp-sourcemaps": "2.6.x",
+    "gulp-sourcemaps": "^2.6.5",
+    "posthtml-include": "^1.4.3",
     "stylelint": "^13.3.3",
     "stylelint-config-htmlacademy": "0.1.x"
   },
@@ -37,5 +39,18 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "dependencies": {
+    "del": "^5.1.0",
+    "gh-pages": "^2.2.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
+    "run-sequence": "^2.2.1"
   }
 }

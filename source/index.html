@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page">
     <header class="page-header page-header--index">
@@ -24,7 +24,9 @@
           </a>
         </div>
         <nav class="main-nav main-nav--index">
-          <button class="main-nav__toggle main-nav__toggle--hidden" type="button"><span class="main-nav__toggle-bar">Меню</span></button>
+          <button class="main-nav__toggle main-nav__toggle--hidden" type="button">
+            <span class="main-nav__toggle-bar">Меню</span>
+          </button>
           <ul class="main-nav__items">
             <li class="main-nav__item">
               <a class="main-nav__item-link main-nav__item-link--active">Главная</a>
@@ -145,8 +147,8 @@
               <div class="toggle__items">
                 <div class="toggle__item toggle__item--before">
                   <picture>
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before@1x.webp, img/before@2x.webp 2x">
-                    <source type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before@1x.png, img/before@2x.png 2x">
+                    <source type="image/webp" srcset="img/before-mobile@1x.png, img/before-mobile@2x.png 2x">
 
                     <source media="(min-width: 768px)" srcset="img/before@1x.png, img/before@2x.png 2x">
                     <img class="toggle__img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="До">
@@ -154,8 +156,8 @@
                 </div>
                 <div class="toggle__item toggle__item--after">
                   <picture>
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/after@1x.webp, img/after@2x.webp 2x">
-                    <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/after@1x.png, img/after@2x.png 2x">
+                    <source type="image/webp" srcset="img/after-mobile@1x.png, img/after-mobile@2x.png 2x">
 
                     <source media="(min-width: 768px)" srcset="img/after@1x.png, img/after@2x.png 2x">
                     <img class="toggle__img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="После">
@@ -256,10 +258,10 @@
 
     </footer>
 
-    <script src="js/svg4everybody.min.js"></script>
+    <script src="js/svg4everybody.js"></script>
     <script>svg4everybody();</script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
-    <script src="js/picturefill.min.js"></script>
-    <script src="js/script.min.js"></script>
+    <script src="js/picturefill.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
