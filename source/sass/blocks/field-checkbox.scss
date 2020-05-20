@@ -1,8 +1,22 @@
 .field-checkbox__input {
   @include visually-hidden;
+
+
 }
 
 .field-checkbox__label {
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: #bababa;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   position: relative;
   display: block;
   padding-top: 12px;
@@ -26,6 +40,7 @@
   &:active {
     opacity: 0.3;
   }
+
 
   &::before {
     content: "";
@@ -60,7 +75,7 @@
 }
 
 .field-checkbox__input:focus ~ .field-checkbox__label::before {
-  border-color: $silver;
+  border: 2px solid $silver;
 }
 
 .field-checkbox__input:not(:disabled) ~ .field-checkbox__label:hover::before {
