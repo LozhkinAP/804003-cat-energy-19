@@ -53,7 +53,7 @@
 }
 
 .field-radio__input:focus ~ .field-radio__label::before {
-  border-color: $silver;
+  border: 2px solid $silver;
 }
 
 .field-radio__input:not(:disabled) ~ .field-radio__label:hover::before {
